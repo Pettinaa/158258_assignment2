@@ -1,0 +1,302 @@
+﻿@{
+    ViewBag.Title = "News";
+}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>GenshinImpact</title>
+    <!-- add links of CSS and JavaScript and Fonts-->
+    <link rel="stylesheet" href="~/wwwroot/css/News.css">
+    <!-- font -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Maven+Pro:wght@500;900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <!-- js -->
+    <script type="text/javascript" src="https://api.map.baidu.com/api?v=1.0&&type=webgl&ak=SS8266fxEG4qZ6AHRc8pI5NwncqpVq08">
+    </script>
+</head>
+<body>
+
+    
+
+
+    <!-- 第一个区域 -->
+    <div class="section" style="background-color: #4e4e7d;">
+        <div class="content">
+            <div class="content-image">
+                <img src="~/wwwroot/image/w3.png" alt="Image 1">
+
+            </div>
+            <div class="content-intro">
+                <img src="~/wwwroot/image/hutao.jpg" alt="hutao">
+            </div>
+            <div class="content-tree">
+                <img src="~/wwwroot/image/tree.jpg" alt="tree">
+            </div>
+            <div class="content-flower">
+                <img src="~/wwwroot/image/flower.jpg" alt="flower">
+            </div>
+            <div class="content-text">
+                <h2>Waterborne Poetry</h2>
+                <p>
+                    The Waterborne Poetry is a Genshin Impact event
+                    in which players have to participate in the spirit
+                    of friendship and poetry sharing. The Poetry Gala is
+                    jointly hosted by representatives from both Liyue and
+                    Mondstadt. It is co-hosted by the Genshin Impact Mondstadt
+                    Archon, Venti, and the 77th Director of the Wangsheng Funeral Parlor, Hu Tao.
+                </p>
+            </div>
+        </div>
+    </div>
+
+    <!-- 第二个区域 -->
+    <div class="section" style="background-color: #0b2a79;">
+        <div class="content">
+            <div class="content-image">
+                <img src="~/wwwroot/image/w2.png" alt="Image 2">
+            </div>
+            <div class="content-area1">
+                <img src="~/wwwroot/image/area1.jpg" alt="area">
+            </div>
+            <div class="content-area2">
+                <img src="~/wwwroot/image/area2.jpg" alt="area">
+            </div>
+            <div class="content-area3">
+                <img src="~/wwwroot/image/area3.jpg" alt="area">
+            </div>
+
+            <div class="content-text1">
+                <h2>Liffey Region</h2>
+            </div>
+            <div class="content-text2">
+                <h2>Fontain Research Institute of<br> Kinetic Energy Engineering Region</h2>
+            </div>
+            <div class="content-text3">
+                <h2> Millennial Pearl Seahorse</h2>
+            </div>
+
+
+
+            <!-- video1 -->
+
+            <div class="on1">
+                <img src="~/wwwroot/image/on.png" aria-hidden="true" id="playButton1">
+            </div>
+            <div id="videoContainer1" class="video-container1">
+                <video id="myVideo1" controls="controls" loop width="640" height="360">
+                    <source src="~/wwwroot/video/area1.mp4" type="video/mp4">
+                </video>
+                <span id="closeButton1" class="close-button1">X</span>
+            </div>
+
+
+
+            <script>
+                var videoContainer1 = document.getElementById("videoContainer1");
+                var video1 = document.getElementById("myVideo1");
+                var playButton1 = document.getElementById("playButton1");
+                var closeButton1 = document.getElementById("closeButton1");
+
+                // 默认情况下，视频和视频容器都不可见
+                videoContainer1.style.display = "none";
+                video1.style.display = "none";
+
+                playButton1.addEventListener("click", function () {
+                    videoContainer1.style.display = "block";
+                    video1.style.display = "block";
+                    video1.play();
+                });
+
+                closeButton1.addEventListener("click", function () {
+                    videoContainer1.style.display = "none";
+                    video1.style.display = "none";
+                    video1.pause();
+                });
+            </script>
+
+            <!-- video2 -->
+
+            <div class="on2">
+                <img src="~/wwwroot/image/on.png" aria-hidden="true" id="playButton2">
+            </div>
+            <div id="videoContainer2" class="video-container2">
+                <video id="myVideo2" controls="controls" loop width="640" height="360">
+                    <source src="~/wwwroot/video/area2.mp4" type="video/mp4">
+                </video>
+                <span id="closeButton2" class="close-button2">X</span>
+            </div>
+
+
+
+            <script>
+                var videoContainer2 = document.getElementById("videoContainer2");
+                var video2 = document.getElementById("myVideo2");
+                var playButton2 = document.getElementById("playButton2");
+                var closeButton2 = document.getElementById("closeButton2");
+
+                // 默认情况下，视频和视频容器都不可见
+                videoContainer2.style.display = "none";
+                video2.style.display = "none";
+
+                playButton2.addEventListener("click", function () {
+                    videoContainer2.style.display = "block";
+                    video2.style.display = "block";
+                    video2.play();
+                });
+
+                closeButton2.addEventListener("click", function () {
+                    videoContainer2.style.display = "none";
+                    video2.style.display = "none";
+                    video2.pause();
+                });
+            </script>
+
+            <!-- video3 -->
+
+            <div class="on3">
+                <img src="~/wwwroot/image/on.png" aria-hidden="true" id="playButton3">
+            </div>
+            <div id="videoContainer3" class="video-container3">
+                <video id="myVideo3" controls="controls" loop width="640" height="360">
+                    <source src="~/wwwroot/video/area3.mp4" type="video/mp4">
+                </video>
+                <span id="closeButton3" class="close-button3">X</span>
+            </div>
+
+
+
+            <script>
+                var videoContainer3 = document.getElementById("videoContainer3");
+                var video3 = document.getElementById("myVideo3");
+                var playButton3 = document.getElementById("playButton3");
+                var closeButton3 = document.getElementById("closeButton3");
+
+                // 默认情况下，视频和视频容器都不可见
+                videoContainer3.style.display = "none";
+                video3.style.display = "none";
+
+                playButton3.addEventListener("click", function () {
+                    videoContainer3.style.display = "block";
+                    video3.style.display = "block";
+                    video3.play();
+                });
+
+                closeButton3.addEventListener("click", function () {
+                    videoContainer3.style.display = "none";
+                    video3.style.display = "none";
+                    video3.pause();
+                });
+            </script>
+
+        </div>
+    </div>
+
+    <!-- 第三个区域 -->
+    <div class="section" style="background-color: #193f92;">
+        <div class="content">
+            <div class="content-image">
+                <img src="~/wwwroot/image/w4.png" alt="Image 3">
+            </div>
+            <div class="content-intro3">
+                <a href="https://act.hoyoverse.com/ys/event/e20230916preview/index.html?game_biz=hk4e_global&hyl_presentation_style=fullscreen&hyl_landscape=true&hyl_hide_status_bar=true&utm_source=genshinofficialweb&utm_medium=fab" target="_blank">
+                    <img src="~/wwwroot/image/recent.jpg" alt="nawei">
+                </a>
+            </div>
+            <div class="content-text">
+                <h2>To the Stars Shining <br> in the Depths</h2>
+                <p>
+                    A Tea Party Most Thorny
+                    Walking around the Court of Fontaine, Paimon suggests to
+                    the Traveler that they take a rest at the Spina di Rosula
+                    base underneath the city. A few days pass before Isadora
+                    arrives, telling the two that Neuvillette wishes to speak
+                    with them at Palais Mermonia. Neuvillette tells them that he has…
+                </p>
+            </div>
+            <div class="concert">
+                <a href="https://act.hoyoverse.com/ys/event/e20230704concert-h5/index.html?game_biz=hk4e_global&hyl_presentation_style=fullscreen&hyl_auth_required=true&hyl_landscape=true&hyl_hide_status_bar=true" target="_blank">
+                    <img src="~/wwwroot/image/concert.jpg" alt="concert">
+                </a>
+            </div>
+        </div>
+    </div>
+
+
+
+
+
+
+
+
+
+
+    <!-- footer -->
+    <footer>
+
+        <!-- word -->
+        <div class="contact-info">
+            <div class="info">
+                <a class="label">Email</a>
+                <a class="value">13611451958@qq.com</a>
+            </div>
+
+            <div class="info">
+                <a class="label">Phone number</a>
+                <a class="value">+86-10-43-62</a>
+            </div>
+
+            <div class="info">
+                <a class="value HoYo">HoYoverse</a>
+            </div>
+
+        </div>
+
+        <!-- message board -->
+        <div class="message-board">
+            <h4>message board</h4>
+            <div class="message-input">
+                <input type="text" id="message" placeholder="typing some words here">
+                <button id="submit">submit</button>
+            </div>
+            <ul class="message-list" id="message-list">
+                <!-- 留言将在这里显示 -->
+            </ul>
+            <!-- 显示提交成功消息的部分 -->
+            <div id="successMessage" style="display: none;"></div>
+        </div>
+        <script src="~/wwwroot/js/board.js"></script>
+
+
+        <!-- map -->
+        <div class="location">
+            <!-- use Baidu Maps insert map-->
+            <div id="container"></div>
+            <script>
+                var map = new BMapGL.Map("container");
+                var point = new BMapGL.Point(121.423258, 31.182332);
+                map.centerAndZoom(point, 18);
+                map.enableScrollWheelZoom(true);
+                map.addControl(new BMap.NavigationControl())
+                map.addControl(new BMap.OverviewMapControl());
+                map.addControl(new BMap.LocationControl());
+
+            </script>
+
+
+            <!-- icon -->
+        </div>
+        <div class="social-media">
+            <!-- icon of social media and some links -->
+            <a href="#"><img src="~/wwwroot/image/Facebook.png" alt="Facebook"></a>
+            <a href="#"><img src="~/wwwroot/image/Instagram.png" alt="Instagram"></a>
+            <a href="#"><img src="~/wwwroot/image/Twitter.png" alt="Twitter"></a>
+            <a href="#"><img src="~/wwwroot/image/YouTube.png" alt="YouTube"></a>
+        </div>
+        <div class="clear"></div>
+    </footer>
+</body>
+</html>

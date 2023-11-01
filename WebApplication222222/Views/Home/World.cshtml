@@ -1,0 +1,223 @@
+﻿@{
+    ViewBag.Title = "World";
+}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>GenshinImpact</title>
+    <!-- add links of CSS and JavaScript and Fonts-->
+    <link rel="stylesheet" href="~/wwwroot/css/World.css">
+    <!-- font -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Maven+Pro:wght@500;900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <!-- js -->
+    <script type="text/javascript" src="https://api.map.baidu.com/api?v=1.0&&type=webgl&ak=SS8266fxEG4qZ6AHRc8pI5NwncqpVq08">
+    </script>
+
+
+</head>
+<body>
+
+
+
+
+
+
+    <div id="navbar">
+        <ul>
+            <li><a href="#section1">Mondstadt</a></li>
+            <li><a href="#section2">Liyue</a></li>
+            <li><a href="#section3">Inazuma</a></li>
+            <li><a href="#section4">Sumeru</a></li>
+            <li><a href="#section5">Fontaine</a></li>
+        </ul>
+    </div>
+
+    <div id="content">
+        <section id="section1">
+            <h2>Mondstadt</h2>
+            <p>
+                A free city-state in the northeastern Tiwat. Amid mountains and
+                vast plains, freedom's wind carries dandelion scents over Fruit
+                Wine Lake, blessing Mond City on the island in the lake's center
+                with Wind God Batos' favor.
+            </p>
+            <div class="logo">
+                <img src="~/wwwroot/image/mengde.png" alt="Logo 1">
+            </div>
+        </section>
+
+
+        <section id="section2">
+            <h2>Liyue</h2>
+            <p>
+                East of Tiva Land, a bountiful harbor. Foothills, stone forests,
+                vast plains, and rivers shape Liyue's diverse scenery, radiant
+                in four seasons. Ancient treasures of rock spirits lie hidden,
+                awaiting discovery.
+            </p>
+            <div class="logo">
+                <img src="~/wwwroot/image/liyue.png" alt="Logo 1">
+            </div>
+        </section>
+
+        <section id="section3">
+            <h2>Inazuma</h2>
+            <p>
+                A secluded archipelago in the Far East of Tiva Land. Amidst storms,
+                explore islands favored by Red Maple and Fei Sakura, witnessing the
+                Lord of the Imperial Palace's eternal quest in the midst of sand embankments.
+            </p>
+            <div class="logo">
+                <img src="~/wwwroot/image/daoqi.png" alt="Logo 1">
+            </div>
+        </section>
+
+        <section id="section4">
+            <h2>Sumeru</h2>
+            <p>
+                A school city's capital in Tihuate's central west. A unique land with
+                rich rainforests and arid deserts, hiding wisdom treasures. Whether
+                in the jungle city or desert, distant travelers gain valuable knowledge.
+            </p>
+            <div class="logo">
+                <img src="~/wwwroot/image/xumi.png" alt="Logo 1">
+            </div>
+        </section>
+
+        <section id="section5">
+            <h2>Fontaine</h2>
+            <p>
+                An above-ground sea in Tiwat's center. Follow Chunchun's waterflow,
+                traverse fields, deep forests, sandy seas to reach the continental
+                water source. At the waterfall's peak and the plateau's sea depths,
+                untold tales and forgotten legends beckon like a sunken kingdom.
+            </p>
+            <div class="logo">
+                <img src="~/wwwroot/image/fengdan.png" alt="Logo 1">
+            </div>
+        </section>
+    </div>
+
+    <script src="~/wwwroot/js/scroll.js"></script>
+
+
+
+    <!-- footer -->
+    <footer>
+
+        <!-- word -->
+        <div class="contact-info">
+            <div class="info">
+                <a class="label">Email</a>
+                <a class="value">13611451958@qq.com</a>
+            </div>
+
+            <div class="info">
+                <a class="label">Phone number</a>
+                <a class="value">+86-10-43-62</a>
+            </div>
+
+            <div class="info">
+                <a class="value HoYo">HoYoverse</a>
+            </div>
+
+        </div>
+
+        <!-- message board -->
+        <div class="message-board">
+            <h4>message board</h4>
+            <div class="message-input">
+                <input type="text" id="message" placeholder="typing some words here">
+                <button id="submit">submit</button>
+            </div>
+            <ul class="message-list" id="message-list">
+                <!-- 留言将在这里显示 -->
+            </ul>
+            <!-- 显示提交成功消息的部分 -->
+            <div id="successMessage" style="display: none;"></div>
+        </div>
+        <script src="~/wwwroot/js/board.js"></script>
+
+
+        <!-- map -->
+        <div class="location">
+            <!-- use Baidu Maps insert map-->
+            <div id="container"></div>
+            <script>
+                var map = new BMapGL.Map("container");
+                var point = new BMapGL.Point(121.423258, 31.182332);
+                map.centerAndZoom(point, 18);
+                map.enableScrollWheelZoom(true);
+                map.addControl(new BMap.NavigationControl())
+                map.addControl(new BMap.OverviewMapControl());
+                map.addControl(new BMap.LocationControl());
+
+            </script>
+
+
+            <!-- icon -->
+        </div>
+        <div class="social-media">
+            <!-- icon of social media and some links -->
+            <a href="https://www.facebook.com"><img src="~/wwwroot/image/Facebook.png" alt="Facebook"></a>
+            <a href="https://www.instagram.com"><img src="~/wwwroot/image/Instagram.png" alt="Instagram"></a>
+            <a href="https://www.twitter.com"><img src="~/wwwroot/image/Twitter.png" alt="Twitter"></a>
+            <a href="https://www.youtube.com"><img src="~/wwwroot/image/YouTube.png" alt="YouTube"></a>
+        </div>
+        <div class="clear"></div>
+    </footer>
+
+
+
+
+
+    <script>
+        const navbar = document.getElementById('navbar');
+        const sections = document.querySelectorAll('section');
+        const footer = document.querySelector('footer');
+
+        // 计算 footer 顶部的偏移量
+        const footerOffset = footer.offsetTop;
+
+        // 添加滚动事件监听器
+        window.addEventListener('scroll', function () {
+            // 获取当前滚动位置
+            const scrollTop = window.scrollY;
+
+            // 根据滚动位置确定当前所在的部分
+            let currentSection = null;
+            sections.forEach(section => {
+                if (section.offsetTop - navbar.offsetHeight <= scrollTop) {
+                    currentSection = section;
+                }
+            });
+
+            // 设置导航栏样式
+            if (currentSection) {
+                // 设置导航项为活动状态
+                const currentNavItem = navbar.querySelector(`[href="#${currentSection.id}"]`);
+                const navItems = navbar.querySelectorAll('a');
+                navItems.forEach(item => {
+                    item.classList.remove('active');
+                });
+                currentNavItem.classList.add('active');
+            }
+
+            // 如果滚动位置达到或超过 footer 顶部位置，将导航栏的位置设置为 absolute
+            if (scrollTop >= footerOffset - navbar.offsetHeight) {
+                navbar.style.position = 'absolute';
+                navbar.style.top = `${footerOffset - navbar.offsetHeight}px`;
+            } else {
+                navbar.style.position = 'fixed';
+                navbar.style.top = '0';
+            }
+        });
+    </script>
+
+</body>
+</html>

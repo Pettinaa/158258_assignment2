@@ -1,0 +1,987 @@
+@charset "UTF-8";
+body{
+    font-family: 'Maven Pro', Tahoma, sans-serif;
+    
+}
+
+audio {
+    display: none;
+}
+
+
+
+
+/* 重置默认的内边距和外边距，以确保页面没有不必要的间距 */
+body, ul {
+    margin: 0;
+    padding: 0;
+}
+
+/* nav */
+header {
+    z-index: 2;
+    position: fixed; /* 使导航栏固定在顶部 */
+    top: 0;
+    left: 0;
+    right: 0;
+    background-color: #242222; /* 导航栏背景颜色 */
+    color: #fff; /* 文本颜色 */
+    padding: 10px 0; /* 上下内边距和左右内边距 */
+    display: flex; /* 使用 Flex 布局来排列 logo 和导航链接 */
+    justify-content: space-between; /* 水平居中 */
+    align-items: center; /* 垂直居中 */
+    height: 80px;
+}
+
+.logo img {
+    max-height: 3em; /* 设置 logo 图片的最大高度 */
+    margin-left: 10px; /* 添加一些间距 */
+}
+
+
+nav ul {
+    list-style: none; /* 去掉列表标记 */
+}
+
+nav li {
+    display: inline; /* 让列表项水平排列 */
+    margin-right: 20px; /* 列表项之间的右边距 */
+}
+
+nav a {
+    text-decoration: none; /* 去掉链接的下划线 */
+    color: #fff; /* 链接文本颜色 */
+    font-weight: bold; /* 链接文本粗体 */
+    font-family: 'Maven Pro', Tahoma, sans-serif;
+}
+
+
+
+/* 为链接添加悬停效果 */
+nav a:hover {
+    text-decoration: underline; /* 链接悬停时下划线出现 */
+}
+
+.content {
+    padding: 100px 0; /* 确保内容不被导航栏遮挡 */
+}
+
+
+body {
+    font-family: 'Open Sans', Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #cccccfc4;
+}
+
+#navbar {
+    width: 250px;
+   position: fixed;
+    top: 0;
+    left: 0;
+    background-color: #333;
+    color: white;
+    height: 100%;
+    overflow-y: auto;
+    box-shadow: 2px 0 4px rgba(0, 0, 0, 0.1);
+    display: flex;
+    flex-direction: column;
+    justify-content: center; /* 垂直居中文本 */
+    
+
+}
+
+#navbar ul {
+    list-style: none;
+    padding: 0;
+    z-index: 1;
+}
+#navbar li {
+    padding: 15px 20px;
+    text-align: center;
+    cursor: pointer;
+    transition: background-color 0.3s;
+    transform: scale(1); /* 初始状态的缩放为 1，不进行缩放 */
+    z-index: 1;
+}
+
+#navbar li:hover {
+    background-color: #555;
+    transform: scale(1.05); /* 在悬停时将字体放大 5% */
+    z-index: 1;
+}
+
+
+#navbar li a {
+    text-decoration: none; /* 去掉链接下划线 */
+    color: white; /* 设置文字颜色为白色 */
+    z-index: 1;
+    font-weight: bold;
+    
+}
+
+#navbar ul li:nth-child(1) a.active {
+    color: cyan;
+    font-size: larger;
+}
+
+#navbar ul li:nth-child(2) a.active {
+    color: rgb(178, 135, 27);
+    font-size: larger;
+}
+
+#navbar ul li:nth-child(3) a.active {
+    color: rgb(209, 72, 243);
+    font-size: larger;
+}
+
+#navbar ul li:nth-child(4) a.active {
+    color: rgb(42, 184, 42);
+    font-size: larger;
+}
+
+#navbar ul li:nth-child(5) a.active {
+    color: rgb(137, 225, 245);
+    font-size: larger;
+}
+
+#navbar ul li:nth-child(6) a.active {
+    color: rgb(70, 177, 240);
+    font-size: larger;
+}
+
+#navbar ul li:nth-child(7) a.active {
+    color: rgb(189, 64, 42);
+    font-size: larger;
+}
+
+
+#navbar ul li {
+    background-image: url("/wwwroot/image/wind.png"); /* 设置第一个图像的路径 */
+    background-repeat: no-repeat; /* 禁止图像重复 */
+    background-position: 180px 10px; /* 将图像定位在列表项的右侧中间 */
+    padding-right: 20px; /* 添加一些右侧内边距，以防止文本与图像重叠 */
+    background-size: 30px 30px;
+}
+
+    #navbar ul li:nth-child(2) {
+        background-image: url("/wwwroot/image/stone.png"); /* 设置第二个图像的路径 */
+        background-size: 30px 30px;
+    }
+
+    #navbar ul li:nth-child(3) {
+        background-image: url("/wwwroot/image/storm.png"); /* 设置第三个图像的路径 */
+        background-size: 30px 30px;
+    }
+
+    #navbar ul li:nth-child(4) {
+        background-image: url("/wwwroot/image/grass.png"); /* 设置第四个图像的路径 */
+        background-size: 30px 30px;
+    }
+
+    #navbar ul li:nth-child(5) {
+        background-image: url("/wwwroot/image/ice.png"); /* 设置第五个图像的路径 */
+        background-size: 30px 30px;
+    }
+
+    #navbar ul li:nth-child(6) {
+        background-image: url("/wwwroot/image/water.png"); /* 设置第五个图像的路径 */
+        background-size: 30px 30px;
+    }
+
+    #navbar ul li:nth-child(7) {
+        background-image: url("/wwwroot/image/fire.png"); /* 设置第五个图像的路径 */
+        background-size: 30px 30px;
+    }
+
+#content {
+    margin-left: 250px;
+    padding-top: 80px; /* 与导航栏高度一致，确保内容不被遮挡 */
+    padding-bottom: 50px;
+   
+}
+
+#section {
+    padding: 90px;
+    margin: 50px;
+    border-radius: 10px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.3);
+    font-size: 16px; /* 调整字体大小 */
+    height: 500px;
+    z-index: 1;
+}
+
+p {
+    line-height: 1.6;
+    color: #f9f2f2;
+    z-index: 1;
+}
+/* 每个section */
+/* section1 */
+#section1 {
+    text-align: center;
+    padding: 40px;
+}
+
+
+#section1 h2 {
+    padding: 50px;
+    font-size: 2.5em;
+    color: #084a74;
+    margin-bottom: 20px;
+    margin-left: 65%;
+}
+
+#section1 p {
+    z-index: 3;
+    width: 55%;
+    margin-left: 45%;
+    padding-top: -20px;
+    font-size: 13px;
+    line-height: 1.6;
+    color: rgb(4, 46, 87);
+    font-weight: bold;
+    margin-bottom: 30px;
+    font-weight: bold;
+    transition: opacity 2s, background-color 2s; /* 添加过渡效果只针对透明度 */
+    padding: 10px;
+    border-radius: 5%;
+    background-color: rgba(217, 240, 245, 0.414);
+}
+
+
+
+/* section2 */
+#section2 {
+   text-align: center;
+    padding: 40px;
+}
+
+
+#section2 h2 {
+    padding: 50px;
+    font-size: 2.5em;
+    color: #772d08;
+    margin-bottom: 20px;
+    
+}
+
+#section2 p {
+    width: 45%;
+    margin-left: 25%;
+    padding-top: -20px;
+    font-size: 13px;
+    line-height: 1.6;
+    color: rgb(79, 32, 37);
+    font-weight: bold;
+    margin-bottom: 30px;
+    font-weight: bold;
+    transition: opacity 2s, background-color 2s; /* 添加过渡效果只针对透明度 */
+    padding: 10px;
+    border-radius: 5%;
+    background-color: rgba(252, 243, 192, 0.404);
+    margin-left: 7%;
+    margin-top: 5%;
+}
+
+
+
+/* section3 */
+#section3 {
+    text-align: center;
+    padding: 40px;
+}
+
+
+#section3 h2 {
+    padding: 50px;
+    font-size: 2.5em;
+    color: #f7eeef; /* 蓝色，你可以根据需求更改颜色 */
+    margin-bottom: 20px;
+    text-align: center;
+}
+
+#section3 p {
+    width: 45%;
+    margin-left: 25%;
+    padding-top: -20px;
+    font-size: 13px;
+    line-height: 1.6;
+    color: rgb(57, 16, 91);
+    font-weight: bold;
+    margin-bottom: 30px;
+    font-weight: bold;
+    transition: opacity 2s, background-color 2s; /* 添加过渡效果只针对透明度 */
+    padding: 10px;
+    border-radius: 5%;
+    background-color: rgba(242, 213, 246, 0.298);
+    margin-left: 55%;
+    margin-top: 5%;
+}
+
+
+/* section4 */
+
+#section4 {
+    text-align: center;
+    padding: 40px;
+}
+
+
+#section4 h2 {
+    padding: 30px;
+    font-size: 2.5em;
+    color: #0c202e; /* 蓝色，你可以根据需求更改颜色 */
+    margin-bottom: 20px;
+    text-align: center;
+}
+
+
+
+#section4 p {
+    width: 45%;
+    margin-left: 55%;
+    margin-top: 15%;
+    padding-top: -20px;
+    font-size: 13px;
+    line-height: 1.6;
+    color: rgb(4, 77, 43);
+    font-weight: bold;
+    margin-bottom: 30px;
+    transition: opacity 2s, background-color 2s; /* 添加过渡效果只针对透明度 */
+    padding: 10px;
+    border-radius: 5%;
+    background-color: rgba(172, 235, 235, 0.243);
+}
+
+
+
+
+/* section5 */
+#section5 {
+    text-align: center;
+    padding: 40px;
+}
+
+
+#section5 h2 {
+    padding: 40px;
+    font-size: 2.5em;
+    color: #1f5980; /* 蓝色，你可以根据需求更改颜色 */
+    margin-bottom: 20px;
+    margin-left: 45%;
+}
+
+
+
+#section5 p {
+    width: 45%;
+    margin-left: -7%;
+    margin-top: 16%;
+    padding-top: -20px;
+    font-size: 13px;
+    line-height: 1.6;
+    color: rgb(28, 67, 85);
+    font-weight: bold;
+    margin-bottom: 30px;
+    transition: opacity 2s, background-color 2s; /* 添加过渡效果只针对透明度 */
+    padding: 10px;
+    border-radius: 5%;
+    background-color: rgba(200, 237, 243, 0.538);
+}
+
+
+
+
+/* section6 */
+
+#section6 {
+    text-align: center;
+    padding: 40px;
+}
+
+
+#section6 h2 {
+    padding: 50px;
+    font-size: 2.5em;
+    color: #084a74;
+    margin-bottom: 20px;
+    margin-left: 65%;
+}
+
+#section6 p {
+    z-index: 3;
+    width: 35%;
+    margin-left: 69%;
+    margin-top: 10%;
+    padding-top: -20px;
+    font-size: 13px;
+    line-height: 1.6;
+    color: rgb(4, 46, 87);
+    font-weight: bold;
+    margin-bottom: 30px;
+    font-weight: bold;
+    transition: opacity 2s, background-color 2s; /* 添加过渡效果只针对透明度 */
+    padding: 10px;
+    border-radius: 5%;
+    background-color: rgba(217, 240, 245, 0.414);
+}
+
+/* section7 */
+#section7 {
+    text-align: center;
+    padding: 40px;
+}
+
+
+#section7 h2 {
+    padding: 50px;
+    font-size: 2.5em;
+    color: #084a74;
+    margin-bottom: 20px;
+    margin-left: 65%;
+}
+
+#section7 p {
+    z-index: 3;
+    width: 40%;
+    margin-left: -5%;
+    margin-top: 10%;
+    padding-top: -20px;
+    font-size: 13px;
+    line-height: 1.6;
+    color: rgb(4, 46, 87);
+    font-weight: bold;
+    margin-bottom: 30px;
+    font-weight: bold;
+    transition: opacity 2s, background-color 2s; /* 添加过渡效果只针对透明度 */
+    padding: 10px;
+    border-radius: 5%;
+    background-color: rgba(217, 240, 245, 0.414);
+}
+
+/* 
+img {
+    max-width: 100%;
+    height: auto;
+    display: block;
+    margin: 0 auto;
+    border-radius: 8px; 
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); 
+}
+ */
+
+/* 为每个section定义不同的渐变背景 */
+#section1 {
+    background: linear-gradient(to bottom left, #a6dcf7, #a1e0d2);
+}
+
+#section2 {
+    background: linear-gradient(to bottom right, #e9e2c6, #e4eb95);
+}
+
+#section3 {
+    background: linear-gradient(to bottom right, #f3e3f3ed, #f6baf6f4);
+}
+
+#section4 {
+    background: linear-gradient(to bottom left, #b7dcd0, #7ee8d6);
+}
+
+#section5 {
+    background: linear-gradient(to bottom right, #6fa3e1, #39c2e7);
+}
+
+#section6 {
+    background: linear-gradient(to bottom left, #b7dcd0, #7ee8d6);
+}
+
+#section7 {
+    background: linear-gradient(to bottom right, #6fa3e1, #39c2e7);
+}
+
+/* section1 */
+#section1 {
+    position: relative;
+    background-image: url('/wwwroot/image/m1.png');
+    background-size: 80%;
+    background-position: bottom left;
+    background-repeat: no-repeat;
+    color: #fff;
+    padding: 90px;
+    margin: 50px;
+    border-radius: 10px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.3);
+    font-size: 16px;
+    height: 380px;
+}
+
+    #section1::before {
+        content: "";
+        background-image: url('/wwwroot/image/s1.jpg');
+        background-size: cover;
+        filter: blur(2px);
+        position: absolute;
+        top: 0;
+        right: 0;
+        bottom: 0;
+        left: 0;
+        z-index: -1; /* 修改为 z-index: 0; */
+        border-radius: 10px;
+    }
+
+/* section2 */
+#section2 {
+    position: relative;
+    background-image: url('/wwwroot/image/m2.png');
+    background-size: 72%;
+    background-position: bottom right;
+    background-repeat: no-repeat;
+    color: #fff;
+    padding: 90px;
+    margin: 50px;
+    border-radius: 10px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.3);
+    font-size: 16px;
+    height: 380px;
+}
+
+    #section2::before {
+        content: "";
+        background-image: url('/wwwroot/image/s2.png');
+        background-size: 60%;
+        background-size: cover;
+        filter: blur(2px);
+        position: absolute;
+        top: 0;
+        right: 0;
+        bottom: 0;
+        left: 0;
+        z-index: -1; /* 修改为 z-index: 0; */
+        border-radius: 10px;
+    }
+
+
+/* 同样的方式配置section3、section4、section5 */
+
+
+/* section3 */
+#section3 {
+    position: relative;
+    background-image: url('/wwwroot/image/m3.png');
+    background-size: 95%;
+    background-position: bottom left;
+    background-repeat: no-repeat;
+    color: #fff;
+    padding: 90px;
+    margin: 50px;
+    border-radius: 10px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.3);
+    font-size: 16px;
+    height: 500px;
+}
+
+    #section3::before {
+        content: "";
+        background-image: url('/wwwroot/image/s3.png');
+        background-size: cover;
+        filter: blur(2px);
+        position: absolute;
+        top: 0;
+        right: 0;
+        bottom: 0;
+        left: 0;
+        z-index: -1;
+        border-radius: 10px;
+    }
+
+/* section4 */
+#section4 {
+    position: relative;
+    background-image: url('/wwwroot/image/m4.png');
+    background-size: cover;
+    background-size: 70%;
+    background-position: bottom left;
+    background-repeat: no-repeat;
+    color: #fff;
+    padding: 90px;
+    margin: 50px;
+    border-radius: 10px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.3);
+    font-size: 16px;
+    height: 500px;
+}
+
+    #section4::before {
+        content: "";
+        background-image: url('/wwwroot/image/s4.png');
+        background-size: cover;
+        filter: blur(2px);
+        position: absolute;
+        top: 0;
+        right: 0;
+        bottom: 0;
+        left: 0;
+        z-index: -1;
+        border-radius: 10px;
+    }
+
+/* section5 */
+#section5 {
+    position: relative;
+    background-image: url('/wwwroot/image/m5.png');
+    background-size: 90%;
+    background-position: bottom right;
+    background-repeat: no-repeat;
+    color: #fff;
+    padding: 90px;
+    margin: 50px;
+    border-radius: 10px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.3);
+    font-size: 16px;
+    height: 500px;
+}
+
+    #section5::before {
+        content: "";
+        background-image: url('/wwwroot/image/s5.png');
+        background-size: cover;
+        filter: blur(2px);
+        position: absolute;
+        top: 0;
+        right: 0;
+        bottom: 0;
+        left: 0;
+        z-index: -1;
+        border-radius: 10px;
+    }
+
+/* section6 */
+#section6 {
+    position: relative;
+    background-image: url('/wwwroot/image/m6.png');
+    background-size: 90%;
+    background-position: bottom left;
+    background-repeat: no-repeat;
+    color: #fff;
+    padding: 90px;
+    margin: 50px;
+    border-radius: 10px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.3);
+    font-size: 16px;
+    height: 500px;
+}
+
+    #section6::before {
+        content: "";
+        background-image: url('/wwwroot/image/s6.png');
+        background-size: cover;
+        filter: blur(2px);
+        position: absolute;
+        top: 0;
+        right: 0;
+        bottom: 0;
+        left: 0;
+        z-index: -1;
+        border-radius: 10px;
+    }
+
+/* section7 */
+#section7 {
+    position: relative;
+    background-image: url('/wwwroot/image/m7.png');
+    background-size: 65%;
+    background-position: bottom right;
+    background-repeat: no-repeat;
+    color: #fff;
+    padding: 90px;
+    margin: 50px;
+    border-radius: 10px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.3);
+    font-size: 16px;
+    height: 500px;
+}
+
+    #section7::before {
+        content: "";
+        background-image: url('/wwwroot/image/s7.png');
+        background-size: cover;
+        filter: blur(2px);
+        position: absolute;
+        top: 0;
+        right: 0;
+        bottom: 0;
+        left: 0;
+        z-index: -1;
+        border-radius: 10px;
+    }
+
+
+.name1 img{
+    width: 40%;
+    position: absolute;
+    top:30%;
+}
+
+
+.name2 img{
+    width: 40%;
+    position: absolute;
+    top:30%;
+    left: 14%;
+}
+
+.name3 img{
+    width: 65%;
+    position: absolute;
+    top:20%;
+    left: 40%;
+}
+
+.name4 img{
+    width: 40%;
+    position: absolute;
+    top:34%;
+    left: 58%;
+}
+
+.name5 img{
+    width: 45%;
+    position: absolute;
+    top:33%;
+    left: 5%;
+}
+
+.name6 img{
+    width: 45%;
+    position: absolute;
+    top:32%;
+    left: 65%;
+}
+
+.name7 img{
+    width: 45%;
+    position: absolute;
+    top:36%;
+    left: 5%;
+}
+
+
+
+.atom1 img{
+    width: 25%;
+    position: absolute;
+    top:15%;
+    left: 56%;
+    opacity: 0.3;
+    z-index: 0;
+}
+
+.atom2 img{
+    width: 25%;
+    position: absolute;
+    top:15%;
+    left: 26%;
+    opacity: 0.4;
+    z-index: 0;
+}
+
+.atom3 img{
+    width: 25%;
+    position: absolute;
+    top:17%;
+    left: 49%;
+    opacity: 0.4;
+    z-index: 0;
+}
+
+.atom4 img{
+    width: 25%;
+    position: absolute;
+    top:17%;
+    left: 49%;
+    opacity: 0.4;
+    z-index: 0;
+}
+
+.atom5 img{
+    width: 25%;
+    position: absolute;
+    top:17%;
+    left: 9%;
+    opacity: 0.4;
+    z-index: 0;
+}
+
+.atom6 img{
+    width: 25%;
+    position: absolute;
+    top:17%;
+    left: 69%;
+    opacity: 0.4;
+    z-index: 0;
+}
+
+.atom7 img{
+    width: 25%;
+    position: absolute;
+    top:17%;
+    left: 9%;
+    opacity: 0.4;
+    z-index: 0;
+}
+
+/* Add any additional styling for sections, images, or text here */
+
+
+
+/* footer */
+
+footer {
+    background-color: #333;
+    color:#f9f9f9;
+    padding: 20px;
+    text-align: center;
+    z-index: 8;
+    }
+/* 
+.clear {
+    clear: both;
+} */
+
+/* map */
+    
+#container{
+    width: 100%; /* Make the map container responsive */
+    padding-bottom: 100%; /* Set the aspect ratio of the map container (1:1 in this case) */
+    position: relative; /* Required for padding-bottom to work */
+    border: #c3f0f5 solid 5px;
+    border-radius: 5%;
+    z-index: 3;
+}
+
+.location {
+    margin-left: 15%;
+    margin-bottom: 5%;
+    margin-top: -20%;
+    width: 25%;
+    z-index: 3;
+}
+
+/* word */
+
+.contact-info{
+    position:absolute;
+    margin-top: 8%;
+    margin-left: 45%;
+    color:#fff;
+    font-size: larger;
+    z-index: 3;
+}
+
+.info {
+    margin-bottom: 10px; /* 可以根据需要调整间距 */
+    z-index: 3;
+}
+
+.label {
+    font-weight: bold;
+    color: rgb(79, 165, 251);
+    z-index: 3;
+}
+
+.value {
+    margin-left: 10px; /* 可以根据需要调整间距 */
+    z-index: 3;
+}
+.contact-info :last-child{
+    font-weight: bold;
+    z-index: 3;
+}
+.HoYo:hover{
+    color: dodgerblue;
+    font-size:larger;
+    transition: all 1s;
+    z-index: 3;
+}
+
+/* board */
+
+.message-board {
+    width: 30%;
+    margin-top:18%;
+    margin-left: 45%;
+    background-color:rgb(73, 153, 234);
+    padding: 1%;
+    border-radius: 5px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+    z-index: 3;
+}
+
+h4 {
+    text-align: center;
+    color:aliceblue;
+    z-index: 3;
+}
+
+.message-input {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 20px;
+    z-index: 3;
+}
+
+#message {
+    width: 70%;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 10px;
+    z-index: 3;
+}
+
+#submit {
+    background-color:rgb(19, 85, 198);
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    padding: 10px 20px;
+    cursor: pointer;
+    font-size: 10px;
+    z-index: 3;
+}
+
+.message-list {
+    list-style: none;
+    padding: 0;
+    margin-top: 20px;
+    z-index: 3;
+}
+
+.message-list li {
+    background-color: #f9f9f9;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    padding: 10px;
+    margin: 10px 0;
+    z-index: 3;
+}
+/* icon */
+    
+.social-media{
+    position: absolute;
+    left: 10%;
+    z-index: 3;
+
+}
+    
+
+.social-media a img{
+    /* float: left; */
+    width: 4%;
+    height: 4%;
+    margin-top: -8%;
+    margin-right: 1ex;
+    z-index: 3;
+}

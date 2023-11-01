@@ -1,0 +1,507 @@
+@charset "UTF-8";
+body{
+    font-family: 'Maven Pro', Tahoma, sans-serif;
+}
+
+audio {
+    display: none;
+}
+
+
+
+
+/* 重置默认的内边距和外边距，以确保页面没有不必要的间距 */
+body, ul {
+    margin: 0;
+    padding: 0;
+}
+
+/* nav */
+header {
+    z-index: 3;
+    position: fixed; /* 使导航栏固定在顶部 */
+    top: 0;
+    left: 0;
+    right: 0;
+    background-color: #242222; /* 导航栏背景颜色 */
+    color: #fff; /* 文本颜色 */
+    padding: 10px 0; /* 上下内边距和左右内边距 */
+    display: flex; /* 使用 Flex 布局来排列 logo 和导航链接 */
+    justify-content: space-between; /* 水平居中 */
+    align-items: center; /* 垂直居中 */
+    height: 80px;
+}
+
+.logo img {
+    max-height: 3em; /* 设置 logo 图片的最大高度 */
+    margin-left: 10px; /* 添加一些间距 */
+}
+
+
+nav ul {
+    list-style: none; /* 去掉列表标记 */
+}
+
+nav li {
+    display: inline; /* 让列表项水平排列 */
+    margin-right: 20px; /* 列表项之间的右边距 */
+}
+
+nav a {
+    text-decoration: none; /* 去掉链接的下划线 */
+    color: #fff; /* 链接文本颜色 */
+    font-weight: bold; /* 链接文本粗体 */
+}
+
+/* 为链接添加悬停效果 */
+nav a:hover {
+    text-decoration: underline; /* 链接悬停时下划线出现 */
+}
+
+.content {
+    padding: 100px 0; /* 确保内容不被导航栏遮挡 */
+}
+
+
+/* 区域内的内容样式 */
+
+/* 第一个 */
+.content {
+    background-image: url('/wwwroot/image/bgp.jpg'), url('/wwwroot/image/round.jpg'); /* 使用逗号分隔多个背景图片 */
+    background-size: cover, cover; /* 分别设置两个背景图片的尺寸 */
+    background-attachment: fixed, fixed; /* 设置两个背景图片都固定在视口中 */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 100vh;
+}
+
+.content-image img {
+    position: absolute;
+    max-width: 38%;
+    left: 33%;
+    margin-top: -25%;
+}
+
+.content-intro img {
+    position: absolute;
+    max-width: 43%;
+    left: 46%;
+    margin-top: -10%;
+    z-index: 1;
+}
+
+.content-flower img {
+    position: absolute;
+    max-width: 60%;
+    left: 40%;
+    margin-top: -13%;
+    
+}
+
+.content-tree img {
+    position: absolute;
+    max-width: 23%;
+    left: 38%;
+    margin-top: -13%;
+    z-index: 2;
+    
+}
+
+.content-text {
+    flex: 1;
+    padding: 20px;
+    color: #ccc;
+    max-width: 30%;
+    margin-top:10%;
+}
+.content-text p {
+    width: 68%;
+    margin-left: -73%;
+    margin-top: 20%;
+    border: 2px solid rgba(41, 37, 94, 0.5);
+    border-radius: 3%;
+    background-color: rgba(98, 113, 144, 0.5);
+    padding: 10px;
+    font-size: 17px;
+    box-shadow: 5px 5px 5px rgba(4, 8, 60, 0.5); /* 以逗号分隔的参数：水平偏移、垂直偏移、模糊半径、阴影颜色 */
+    font-family: 'Maven Pro', Tahoma, sans-serif;
+  }
+  
+.content-text h2 {
+    position: absolute;
+    margin-top: 1%;
+    margin-left: -20%;
+    font-size: 24px;
+    color: #a7cbec; /* 修改标题的字体颜色 */
+}
+
+/* 添加阴影效果 */
+.section:hover {
+    box-shadow: 0 0 20px rgba(255, 255, 255, 0.3);
+}
+
+
+/* 第二个 */
+/* picture and text */
+.content-area1 img {
+    position: absolute;
+    max-width: 21%;
+    left: 10%;
+    margin-top: -13%;
+    
+}
+.content-area2 img {
+    position: absolute;
+    max-width: 21%;
+    left: 41%;
+    margin-top: -13%;
+    
+}
+.content-area3 img {
+    position: absolute;
+    max-width: 21%;
+    left: 70%;
+    margin-top: -13%;
+    
+}
+
+.content-text1 {
+    flex: 1;
+    padding: 20px;
+    color: #ccc;
+    max-width: 30%;
+    margin-top: 25%;
+    margin-left: 10%;
+}
+.content-text2 {
+    flex: 1;
+    padding: 190px;
+    color: #ccc;
+    max-width: 25%;
+    margin-top: 25%;
+    margin-left: -22%;
+}
+.content-text3 {
+    color: #ccc;
+    padding: 50px;
+    max-width: 20%;
+    margin-top: 25%;
+    margin-left: -12%;
+}
+.content-text2 h2{
+    font-size: 20px;
+}
+
+
+
+/* video */
+/* video1 */
+.on1 {
+    position: relative;
+}
+.video-container1 {
+    display: none;
+    position: fixed;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.7);
+    z-index: 999;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+#myVideo1 {
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    width: 80%;
+    height: 80%;
+    background-color: #333;
+}
+.on1{
+    position: absolute;
+    max-width: 11%;
+    left: 19%;
+    margin-top: 33%;
+}
+.on1 img{
+    max-width:75%;
+} 
+.on1:hover {
+    transform: scale(1.1); /* 图标微微放大 */
+    filter: brightness(1.2); /* 图标颜色变深 */
+    transition: transform 0.3s ease, filter 0.3s ease; /* 添加过渡效果，使变化更平滑 */
+}
+.close-button1 {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    font-size: 20px;
+    color: white;
+    cursor: pointer;
+}
+
+/* video2 */
+.on2 {
+    position: relative;
+}
+.video-container2 {
+    display: none;
+    position: fixed;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.7);
+    z-index: 999;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+#myVideo2 {
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    width: 80%;
+    height: 80%;
+    background-color: #333;
+}
+.on2{
+    position: absolute;
+    max-width: 11%;
+    left: 50%;
+    margin-top: 33%;
+}
+.on2 img{
+    max-width:75%;
+} 
+.on2:hover {
+    transform: scale(1.1); /* 图标微微放大 */
+    filter: brightness(1.2); /* 图标颜色变深 */
+    transition: transform 0.3s ease, filter 0.3s ease; /* 添加过渡效果，使变化更平滑 */
+}
+.close-button2 {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    font-size: 20px;
+    color: white;
+    cursor: pointer;
+}
+
+
+
+
+
+/* video3 */
+.on3 {
+    position: relative;
+}
+.video-container3 {
+    display: none;
+    position: fixed;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.7);
+    z-index: 999;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+#myVideo3 {
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    width: 80%;
+    height: 80%;
+    background-color: #333;
+}
+.on3{
+    position: absolute;
+    max-width: 11%;
+    left: 80%;
+    margin-top: 33%;
+}
+.on3 img{
+    max-width:75%;
+} 
+.on3:hover {
+    transform: scale(1.1); /* 图标微微放大 */
+    filter: brightness(1.2); /* 图标颜色变深 */
+    transition: transform 0.3s ease, filter 0.3s ease; /* 添加过渡效果，使变化更平滑 */
+}
+.close-button3 {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    font-size: 20px;
+    color: white;
+    cursor: pointer;
+}
+
+
+
+/* 第三个 */
+.content-intro3 img {
+    position: absolute;
+    max-width: 55%;
+    left: 43%;
+    margin-top: -10%;
+    z-index: 1;
+    border: 3px solid rgb(7, 7, 59); /* 蓝色边框 */
+    border-radius: 10px; /* 边框圆角半径，可以根据需要调整 */
+    box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.5); /* 图片阴影，可以根据需要调整参数 */
+}
+
+.concert img {
+    position: absolute;
+    max-width: 75%;
+    left: 15%;
+    margin-top: 27%;
+}
+
+
+/* footer */
+
+footer {
+    background-color: #333;
+    color:#f9f9f9;
+    padding: 20px;
+    text-align: center;
+   
+    }
+/* 
+.clear {
+    clear: both;
+} */
+
+/* map */
+    
+#container{
+    width: 100%; /* Make the map container responsive */
+    padding-bottom: 100%; /* Set the aspect ratio of the map container (1:1 in this case) */
+    position: relative; /* Required for padding-bottom to work */
+    border: #c3f0f5 solid 5px;
+    border-radius: 5%;
+}
+
+.location {
+    margin-left: 15%;
+    margin-bottom: 5%;
+    margin-top: -20%;
+    width: 25%;
+}
+
+/* word */
+
+.contact-info{
+    position:absolute;
+    margin-top: 8%;
+    margin-left: 45%;
+    color:#fff;
+    font-size: larger;
+}
+
+.info {
+    margin-bottom: 10px; /* 可以根据需要调整间距 */
+}
+
+.label {
+    font-weight: bold;
+    color: rgb(79, 165, 251);
+}
+
+.value {
+    margin-left: 10px; /* 可以根据需要调整间距 */
+}
+.contact-info :last-child{
+    font-weight: bold;
+}
+.HoYo:hover{
+    color: dodgerblue;
+    font-size:larger;
+    transition: all 1s;
+}
+
+/* board */
+
+.message-board {
+    width: 30%;
+    margin-top:18%;
+    margin-left: 45%;
+    background-color:rgb(73, 153, 234);
+    padding: 1%;
+    border-radius: 5px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+}
+
+h4 {
+    text-align: center;
+    color:aliceblue;
+}
+
+.message-input {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 20px;
+}
+
+#message {
+    width: 70%;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 10px;
+}
+
+#submit {
+    background-color:rgb(19, 85, 198);
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    padding: 10px 20px;
+    cursor: pointer;
+    font-size: 10px;
+}
+
+.message-list {
+    list-style: none;
+    padding: 0;
+    margin-top: 20px;
+}
+
+.message-list li {
+    background-color: #f9f9f9;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    padding: 10px;
+    margin: 10px 0;
+}
+/* icon */
+    
+.social-media{
+    position: absolute;
+    left: 10%;
+
+}
+    
+
+.social-media a img{
+    /* float: left; */
+    width: 4%;
+    height: 4%;
+    margin-top: -8%;
+    margin-right: 1ex;
+}
+
+

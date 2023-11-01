@@ -1,0 +1,298 @@
+@charset "UTF-8";
+
+body {
+    font-family: 'Maven Pro', Tahoma, sans-serif;
+}
+
+audio {
+    display: none;
+}
+
+
+
+
+/* 重置默认的内边距和外边距，以确保页面没有不必要的间距 */
+body, ul {
+    margin: 0;
+    padding: 0;
+}
+
+/* nav */
+header {
+    z-index: 2;
+    position: fixed; /* 使导航栏固定在顶部 */
+    top: 0;
+    left: 0;
+    right: 0;
+    background-color: #242222; /* 导航栏背景颜色 */
+    color: #fff; /* 文本颜色 */
+    padding: 10px 0; /* 上下内边距和左右内边距 */
+    display: flex; /* 使用 Flex 布局来排列 logo 和导航链接 */
+    justify-content: space-between; /* 水平居中 */
+    align-items: center; /* 垂直居中 */
+    height: 80px;
+}
+
+.logo img {
+    max-height: 3em; /* 设置 logo 图片的最大高度 */
+    margin-left: 10px; /* 添加一些间距 */
+}
+
+
+nav ul {
+    list-style: none; /* 去掉列表标记 */
+}
+
+nav li {
+    display: inline; /* 让列表项水平排列 */
+    margin-right: 20px; /* 列表项之间的右边距 */
+}
+
+nav a {
+    text-decoration: none; /* 去掉链接的下划线 */
+    color: #fff; /* 链接文本颜色 */
+    font-weight: bold; /* 链接文本粗体 */
+}
+
+    /* 为链接添加悬停效果 */
+    nav a:hover {
+        text-decoration: underline; /* 链接悬停时下划线出现 */
+    }
+
+.content {
+    padding: 100px 0; /* 确保内容不被导航栏遮挡 */
+}
+
+
+
+/*pictures */
+.slideshow-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border: 1px solid #ccc;
+    padding: 10px;
+    margin-top: 80px;
+    overflow: hidden;
+    max-width: 100%;
+    position: relative;
+    height: calc(110vh - 80px);
+    z-index: 1;
+}
+
+.mySlides {
+    border: 1px solid #000;
+    margin: 0;
+    max-width: 100%;
+    max-height: 100%;
+    display: none;
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+    transition: opacity 1s;
+}
+
+    .mySlides:first-child {
+        left: 0;
+    }
+
+    .mySlides.fade {
+        display: block;
+    }
+
+/* video */
+/* 样式图标 */
+
+
+.show-video {
+    position: relative;
+}
+
+.video-container {
+    display: none;
+    position: fixed;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.7);
+    z-index: 999;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#myVideo {
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    width: 80%;
+    height: 80%;
+    background-color: #333;
+}
+
+.video-icon {
+    position: absolute;
+    left: 48%;
+    width: 30px;
+    cursor: pointer;
+    z-index: 1;
+    transition: opacity 0.3s; /* 添加过渡效果，透明度渐变 */
+}
+
+    .video-icon:hover {
+        opacity: 0.7; /* 降低透明度以强调 */
+        transform: scale(1.1); /* 图标微微放大 */
+    }
+
+
+.close-button {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    font-size: 20px;
+    color: white;
+    cursor: pointer;
+}
+
+
+
+
+
+/* footer */
+
+footer {
+    background-color: #333;
+    color: #f9f9f9;
+    padding: 20px;
+    text-align: center;
+}
+/* 
+.clear {
+    clear: both;
+} */
+
+/* map */
+
+#container {
+    width: 100%; /* Make the map container responsive */
+    padding-bottom: 100%; /* Set the aspect ratio of the map container (1:1 in this case) */
+    position: relative; /* Required for padding-bottom to work */
+    border: #c3f0f5 solid 5px;
+    border-radius: 5%;
+}
+
+.location {
+    margin-left: 15%;
+    margin-bottom: 5%;
+    margin-top: -20%;
+    width: 25%;
+}
+
+/* word */
+
+.contact-info {
+    position: absolute;
+    margin-top: 5%;
+    margin-left: 45%;
+    color: #fff;
+    font-size: larger;
+}
+
+.info {
+    margin-bottom: 10px; /* 可以根据需要调整间距 */
+}
+
+.label {
+    font-weight: bold;
+    color: rgb(79, 165, 251);
+}
+
+.value {
+    margin-left: 10px; /* 可以根据需要调整间距 */
+}
+
+.contact-info :last-child {
+    font-weight: bold;
+}
+
+.HoYo:hover {
+    color: dodgerblue;
+    font-size: larger;
+    transition: all 1s;
+}
+
+/* board */
+
+.message-board {
+    width: 30%;
+    margin-top: 18%;
+    margin-left: 45%;
+    background-color: rgb(73, 153, 234);
+    padding: 1%;
+    border-radius: 5px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+}
+
+h4 {
+    text-align: center;
+    color: aliceblue;
+}
+
+.message-input {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 20px;
+}
+
+#message {
+    width: 70%;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 10px;
+}
+
+#submit {
+    background-color: rgb(19, 85, 198);
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    padding: 10px 20px;
+    cursor: pointer;
+    font-size: 10px;
+}
+
+.message-list {
+    list-style: none;
+    padding: 0;
+    margin-top: 20px;
+}
+
+    .message-list li {
+        background-color: #f9f9f9;
+        border: 1px solid #ccc;
+        border-radius: 5px;
+        padding: 10px;
+        margin: 10px 0;
+    }
+/* icon */
+
+.social-media {
+    position: absolute;
+    left: 10%;
+}
+
+
+    .social-media a img {
+        /* float: left; */
+        width: 4%;
+        height: 4%;
+        margin-top: -8%;
+        margin-right: 1ex;
+    }

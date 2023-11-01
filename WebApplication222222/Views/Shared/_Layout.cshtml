@@ -1,0 +1,180 @@
+﻿@{
+    ViewBag.Title = "GenshinImpact";
+}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>@ViewBag.Title</title>
+    <!-- add links of CSS and JavaScript and Fonts-->
+    
+    <!-- font -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Maven+Pro:wght@500;900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <!-- js -->
+    <script type="text/javascript" src="https://api.map.baidu.com/api?v=1.0&&type=webgl&ak=SS8266fxEG4qZ6AHRc8pI5NwncqpVq08">
+    </script>
+    <style>
+       
+
+    body {
+        font-family: 'Maven Pro', Tahoma, sans-serif;
+    }
+
+    audio {
+        display: none;
+    }
+
+
+
+
+    /* 重置默认的内边距和外边距，以确保页面没有不必要的间距 */
+    body, ul {
+        margin: 0;
+        padding: 0;
+    }
+
+    /* 创建导航栏样式 */
+    header {
+        z-index: 2;
+        position: fixed; /* 使导航栏固定在顶部 */
+        top: 0;
+        left: 0;
+        right: 0;
+        background-color: #242222; /* 导航栏背景颜色 */
+        color: #fff; /* 文本颜色 */
+        padding: 10px 0; /* 上下内边距和左右内边距 */
+        display: flex; /* 使用 Flex 布局来排列 logo 和导航链接 */
+        justify-content: space-between; /* 水平居中 */
+        align-items: center; /* 垂直居中 */
+        height: 80px;
+    }
+
+    .logo img {
+        max-height: 3em; /* 设置 logo 图片的最大高度 */
+        margin-left: 10px; /* 添加一些间距 */
+    }
+
+
+    nav ul {
+        list-style: none; /* 去掉列表标记 */
+    }
+
+    nav li {
+        display: inline; /* 让列表项水平排列 */
+        margin-right: 20px; /* 列表项之间的右边距 */
+    }
+
+    nav a {
+        text-decoration: none; /* 去掉链接的下划线 */
+        color: #fff; /* 链接文本颜色 */
+        font-weight: bold; /* 链接文本粗体 */
+    }
+
+        /* 为链接添加悬停效果 */
+        nav a:hover {
+            text-decoration: underline; /* 链接悬停时下划线出现 */
+        }
+
+    .content {
+        padding: 100px 0; /* 确保内容不被导航栏遮挡 */
+    }
+
+
+        /* 调整搜索框样式 */
+        .navbar-form {
+            display: inline-block;
+            float: right;
+            margin-right: 20px;
+        }
+
+        .form-control {
+            width: 160px; /* 缩小搜索框的宽度 */
+            height: 13px; /* 调整搜索框的高度 */
+            background-color: lightblue;
+            color: darkblue;
+            border: none;
+            padding: 7px;
+            margin-top: 10px;
+            border-radius: 15px;
+            transition: background-color 0.3s, border 0.3s; /* 添加边框的过渡效果 */
+            border: 2px solid transparent; /* 初始时边框透明 */
+        }
+
+            .form-control::placeholder {
+                color: #555;
+            }
+
+            .form-control:focus {
+                background-color: #fff;
+                outline: none;
+                border: 2px solid white; /* 点击时显示白色边框 */
+            }
+
+    </style>
+</head>
+<body>
+    @RenderBody()
+
+    <!-- nav -->
+    <header>
+        <div class="logo">
+            <img class="logo1" src="~/wwwroot/image/logoG.png" alt="Logo">
+            <img class="logo2" src="~/wwwroot/image/mihoyo.png" alt="HoYo">
+        </div>
+        <nav>
+            <ul>
+                <li><a href="@Url.Action("Index", "Home")" class="nav-item">Home</a></li>
+                <li><a href="@Url.Action("News", "Home")" class="nav-item">News</a></li>
+                <li><a href="@Url.Action("World", "Home")" class="nav-item">World</a></li>
+                <li><a href="@Url.Action("Character", "Home")" class="nav-item">Character</a></li>
+                <li>@Html.ActionLink("Element", "Index", "Elements", new { area = "" }, new { @class = "nav-link" })</li>
+                <li>@Html.ActionLink("Atlas", "Index", "Characters", new { area = "" }, new { @class = "nav-link" })</li>
+            </ul>
+            @using (Html.BeginForm("Index", "Characters", FormMethod.Get, new { @class = "navbar-form navbar-left" }))
+            {
+                <div class="input-group">
+                    <!-- 添加一个input-group容器 -->
+                    <div class="form-group">
+                        @Html.TextBox("Search", null, new { @class = "form-control", @placeholder = "Search Characters", style = "width: 150px; background-color: lightblue; color: darkblue;" })
+                    </div>
+                </div>
+            }
+        </nav>
+    </header>
+
+    <script src="~/wwwroot/js/changeColor.js"></script>
+
+
+
+    <!-- music   -->
+    <audio id="myAudio" controls="controls" autoplay="autoplay" loop>
+        <source src="~/wwwroot/audioMusic/Liyue.ogg" type="audio/ogg" />
+    </audio>
+
+    <script>
+        var audio = document.getElementById("myAudio");
+
+        // 在页面的任何位置监听点击事件
+        document.addEventListener("click", function () {
+            // 检查音频是否已经在播放
+            if (audio.paused) {
+                audio.play(); // 如果音频没有播放，则开始播放
+            }
+        });
+    </script>
+
+
+
+    @Scripts.Render("~/bundles/jquery")
+    @Scripts.Render("~/bundles/bootstrap")
+    @RenderSection("scripts", required: false)
+
+
+
+
+</body>
+</html>
