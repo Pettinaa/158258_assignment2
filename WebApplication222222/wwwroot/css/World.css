@@ -10,7 +10,7 @@ audio {
 
 
 
-/* 重置默认的内边距和外边距，以确保页面没有不必要的间距 */
+
 body, ul {
     margin: 0;
     padding: 0;
@@ -19,48 +19,48 @@ body, ul {
 /* nav */
 header {
     z-index: 2;
-    position: fixed; /* 使导航栏固定在顶部 */
+    position: fixed; 
     top: 0;
     left: 0;
     right: 0;
-    background-color: #242222; /* 导航栏背景颜色 */
-    color: #fff; /* 文本颜色 */
-    padding: 10px 0; /* 上下内边距和左右内边距 */
-    display: flex; /* 使用 Flex 布局来排列 logo 和导航链接 */
-    justify-content: space-between; /* 水平居中 */
-    align-items: center; /* 垂直居中 */
+    background-color: #242222; 
+    color: #fff; 
+    padding: 10px 0; 
+    display: flex; 
+    justify-content: space-between; 
+    align-items: center; 
     height: 80px;
 }
 
 .logo img {
-    max-height: 3em; /* 设置 logo 图片的最大高度 */
-    margin-left: 10px; /* 添加一些间距 */
+    max-height: 3em; 
+    margin-left: 10px; 
 }
 
 
 nav ul {
-    list-style: none; /* 去掉列表标记 */
+    list-style: none; 
 }
 
 nav li {
-    display: inline; /* 让列表项水平排列 */
-    margin-right: 20px; /* 列表项之间的右边距 */
+    display: inline; 
+    margin-right: 20px; 
 }
 
 nav a {
-    text-decoration: none; /* 去掉链接的下划线 */
-    color: #fff; /* 链接文本颜色 */
-    font-weight: bold; /* 链接文本粗体 */
+    text-decoration: none;
+    color: #fff; 
+    font-weight: bold; 
     font-family: 'Maven Pro', Tahoma, sans-serif;
 }
 
-/* 为链接添加悬停效果 */
+
 nav a:hover {
-    text-decoration: underline; /* 链接悬停时下划线出现 */
+    text-decoration: underline; 
 }
 
 .content {
-    padding: 100px 0; /* 确保内容不被导航栏遮挡 */
+    padding: 100px 0; 
 }
 
 
@@ -83,7 +83,7 @@ body {
     box-shadow: 2px 0 4px rgba(0, 0, 0, 0.1);
     display: flex;
     flex-direction: column;
-    justify-content: center; /* 垂直居中文本 */
+    justify-content: center; 
     
 
 }
@@ -98,20 +98,20 @@ body {
     text-align: center;
     cursor: pointer;
     transition: background-color 0.3s;
-    transform: scale(1); /* 初始状态的缩放为 1，不进行缩放 */
+    transform: scale(1); 
     z-index: 1;
 }
 
 #navbar li:hover {
     background-color: #555;
-    transform: scale(1.05); /* 在悬停时将字体放大 5% */
+    transform: scale(1.05); 
     z-index: 1;
 }
 
 
 #navbar li a {
-    text-decoration: none; /* 去掉链接下划线 */
-    color: white; /* 设置文字颜色为白色 */
+    text-decoration: none; 
+    color: white; 
     z-index: 1;
     font-weight: bold;
     
@@ -144,37 +144,37 @@ body {
 
 
     #navbar ul li {
-        background-image: url("/wwwroot/image/mengde.png"); /* 设置第一个图像的路径 */
-        background-repeat: no-repeat; /* 禁止图像重复 */
-        background-position: 180px 10px; /* 将图像定位在列表项的右侧中间 */
-        padding-right: 20px; /* 添加一些右侧内边距，以防止文本与图像重叠 */
+        background-image: url("/wwwroot/image/mengde.png"); 
+        background-repeat: no-repeat; 
+        background-position: 180px 10px; 
+        padding-right: 20px; 
         background-size: 30px 30px;
     }
 
         #navbar ul li:nth-child(2) {
-            background-image: url("/wwwroot/image/liyue.png"); /* 设置第二个图像的路径 */
+            background-image: url("/wwwroot/image/liyue.png"); 
             background-size: 30px 30px;
         }
 
         #navbar ul li:nth-child(3) {
-            background-image: url("/wwwroot/image/daoqi.png"); /* 设置第三个图像的路径 */
+            background-image: url("/wwwroot/image/daoqi.png"); 
             background-size: 30px 30px;
         }
 
         #navbar ul li:nth-child(4) {
-            background-image: url("/wwwroot/image/xumi.png"); /* 设置第四个图像的路径 */
+            background-image: url("/wwwroot/image/xumi.png"); 
             background-size: 30px 30px;
         }
 
         #navbar ul li:nth-child(5) {
-            background-image: url("/wwwroot/image/fengdan.png"); /* 设置第五个图像的路径 */
+            background-image: url("/wwwroot/image/fengdan.png"); 
             background-size: 30px 30px;
         }
 
 
 #content {
     margin-left: 250px;
-    padding-top: 80px; /* 与导航栏高度一致，确保内容不被遮挡 */
+    padding-top: 80px; 
     padding-bottom: 150px;
    
 }
@@ -184,7 +184,7 @@ body {
     margin: 50px;
     border-radius: 10px;
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.3);
-    font-size: 16px; /* 调整字体大小 */
+    font-size: 16px; 
     height: 500px;
     z-index: 1;
 }
@@ -194,7 +194,7 @@ p {
     color: #f9f2f2;
     z-index: 1;
 }
-/* 每个section */
+/* every section */
 /* section1 */
 #section1 {
     text-align: center;
@@ -220,8 +220,8 @@ p {
     font-weight: bold;
     margin-bottom: 30px;
     font-weight: bold;
-    opacity: 0; /* 设置透明度为0，隐藏文本 */
-    transition: opacity 2s, background-color 2s; /* 添加过渡效果只针对透明度 */
+    opacity: 0; 
+    transition: opacity 2s, background-color 2s; 
     padding: 10px;
     border-radius: 5%;
     background-color: rgba(217, 240, 245, 0.414);
@@ -231,7 +231,7 @@ p {
     padding: 10px;
     border-radius: 5%;
     background-color: rgba(208, 238, 231, 0.428);
-    opacity: 1; /* 透明度为1，显示文本 */  
+    opacity: 1; 
 }
 
 #section1 h2:hover {
@@ -262,8 +262,8 @@ p {
     font-weight: bold;
     margin-bottom: 30px;
     font-weight: bold;
-    opacity: 0; /* 设置透明度为0，隐藏文本 */
-    transition: opacity 2s, background-color 2s; /* 添加过渡效果只针对透明度 */
+    opacity: 0; 
+    transition: opacity 2s, background-color 2s; 
     padding: 10px;
     border-radius: 5%;
     background-color: rgba(252, 243, 192, 0.404);
@@ -273,7 +273,7 @@ p {
     padding: 10px;
     border-radius: 5%;
     background-color: rgba(240, 221, 195, 0.486);
-    opacity: 1; /* 透明度为1，显示文本 */  
+    opacity: 1; 
 }
 
 #section2 h2:hover {
@@ -289,7 +289,7 @@ p {
 #section3 h2 {
     padding: 50px;
     font-size: 2.5em;
-    color: #f7eeef; /* 蓝色，你可以根据需求更改颜色 */
+    color: #f7eeef; 
     margin-bottom: 20px;
     text-align: center;
 }
@@ -304,8 +304,8 @@ p {
     font-weight: bold;
     margin-bottom: 30px;
     font-weight: bold;
-    opacity: 0; /* 设置透明度为0，隐藏文本 */
-    transition: opacity 2s, background-color 2s; /* 添加过渡效果只针对透明度 */
+    opacity: 0; 
+    transition: opacity 2s, background-color 2s; 
     padding: 10px;
     border-radius: 5%;
     background-color: rgba(252, 192, 200, 0.39);
@@ -315,7 +315,7 @@ p {
     padding: 10px;
     border-radius: 5%;
     background-color: rgba(212, 82, 126, 0.219);
-    opacity: 1; /* 透明度为1，显示文本 */  
+    opacity: 1; 
 }
 
 #section3 h2:hover {
@@ -332,7 +332,7 @@ p {
 #section4 h2 {
     padding: 30px;
     font-size: 2.5em;
-    color: #0c202e; /* 蓝色，你可以根据需求更改颜色 */
+    color: #0c202e; 
     margin-bottom: 20px;
     text-align: center;
 }
@@ -349,8 +349,8 @@ p {
     font-weight: bold;
     margin-bottom: 30px;
     font-weight: bold;
-    opacity: 0; /* 设置透明度为0，隐藏文本 */
-    transition: opacity 2s, background-color 2s; /* 添加过渡效果只针对透明度 */
+    opacity: 0;
+    transition: opacity 2s, background-color 2s; 
     padding: 10px;
     border-radius: 5%;
     background-color: rgba(124, 217, 235, 0.332);
@@ -360,7 +360,7 @@ p {
     padding: 10px;
     border-radius: 5%;
     background-color: rgba(124, 217, 235, 0.428);
-    opacity: 1; /* 透明度为1，显示文本 */  
+    opacity: 1; 
 }
 
 #section4 h2:hover {
@@ -377,7 +377,7 @@ p {
 #section5 h2 {
     padding: 40px;
     font-size: 2.5em;
-    color: #1f5980; /* 蓝色，你可以根据需求更改颜色 */
+    color: #1f5980; 
     margin-bottom: 20px;
     text-align: center;
 }
@@ -394,8 +394,8 @@ p {
     font-weight: bold;
     margin-bottom: 30px;
     font-weight: bold;
-    opacity: 0; /* 设置透明度为0，隐藏文本 */
-    transition: opacity 2s, background-color 2s; /* 添加过渡效果只针对透明度 */
+    opacity: 0; 
+    transition: opacity 2s, background-color 2s; 
     padding: 10px;
     border-radius: 5%;
     background-color: rgba(164, 221, 231, 0.616);
@@ -405,7 +405,7 @@ p {
     padding: 10px;
     border-radius: 5%;
     background-color: rgba(177, 227, 238, 0.545);
-    opacity: 1; /* 透明度为1，显示文本 */  
+    opacity: 1; 
 }
 
 #section5 h2:hover {
@@ -424,7 +424,7 @@ img {
 }
  */
 
-/* 为每个section定义不同的渐变背景 */
+
 #section1 {
     background: linear-gradient(to bottom left, #a6dcf7, #a1e0d2);
 }
@@ -448,13 +448,13 @@ img {
 
 
 #section1 {
-    background-image: url('/wwwroot/image/1024_1.jpg'); /* 替换 'your-background-image.jpg' 为你的背景图片路径 */
+    background-image: url('/wwwroot/image/1024_1.jpg'); 
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
-    color: #fff; /* 设置文本颜色，以确保在背景图上可见 */
-    padding: 90px; /* 保留原有的 padding */
-    margin: 50px; /* 保留原有的 margin */
+    color: #fff;
+    padding: 90px; 
+    margin: 50px; 
     border-radius: 10px;
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.3);
     font-size: 16px;
@@ -464,13 +464,13 @@ img {
 
 
 #section2 {
-    background-image: url('/wwwroot/image/1024_2.jpg'); /* 替换 'your-background-image.jpg' 为你的背景图片路径 */
+    background-image: url('/wwwroot/image/1024_2.jpg'); 
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
-    color: #fff; /* 设置文本颜色，以确保在背景图上可见 */
-    padding: 90px; /* 保留原有的 padding */
-    margin: 50px; /* 保留原有的 margin */
+    color: #fff; 
+    padding: 90px; 
+    margin: 50px; 
     border-radius: 10px;
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.3);
     font-size: 16px;
@@ -478,13 +478,13 @@ img {
 }
 
 #section3 {
-    background-image: url('/wwwroot/image/1024_3.jpg'); /* 替换 'your-background-image.jpg' 为你的背景图片路径 */
+    background-image: url('/wwwroot/image/1024_3.jpg');
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
-    color: #fff; /* 设置文本颜色，以确保在背景图上可见 */
-    padding: 90px; /* 保留原有的 padding */
-    margin: 50px; /* 保留原有的 margin */
+    color: #fff; 
+    padding: 90px; 
+    margin: 50px; 
     border-radius: 10px;
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.3);
     font-size: 16px;
@@ -492,13 +492,13 @@ img {
 }
 
 #section4 {
-    background-image: url('/wwwroot/image/1024_4.jpg'); /* 替换 'your-background-image.jpg' 为你的背景图片路径 */
+    background-image: url('/wwwroot/image/1024_4.jpg');
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
-    color: #fff; /* 设置文本颜色，以确保在背景图上可见 */
-    padding: 90px; /* 保留原有的 padding */
-    margin: 50px; /* 保留原有的 margin */
+    color: #fff; 
+    padding: 90px; 
+    margin: 50px;
     border-radius: 10px;
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.3);
     font-size: 16px;
@@ -506,13 +506,13 @@ img {
 }
 
 #section5 {
-    background-image: url('/wwwroot/image/1024_5.jpg'); /* 替换 'your-background-image.jpg' 为你的背景图片路径 */
+    background-image: url('/wwwroot/image/1024_5.jpg'); 
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
-    color: #fff; /* 设置文本颜色，以确保在背景图上可见 */
-    padding: 90px; /* 保留原有的 padding */
-    margin: 50px; /* 保留原有的 margin */
+    color: #fff; 
+    padding: 90px; 
+    margin: 50px; 
     border-radius: 10px;
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.3);
     font-size: 16px;
@@ -569,7 +569,7 @@ footer {
 }
 
 .info {
-    margin-bottom: 10px; /* 可以根据需要调整间距 */
+    margin-bottom: 10px; 
     z-index: 3;
 }
 
@@ -580,7 +580,7 @@ footer {
 }
 
 .value {
-    margin-left: 10px; /* 可以根据需要调整间距 */
+    margin-left: 10px; 
     z-index: 3;
 }
 .contact-info :last-child{

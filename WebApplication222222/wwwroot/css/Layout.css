@@ -1,0 +1,95 @@
+﻿
+
+body {
+    font-family: 'Maven Pro', Tahoma, sans-serif;
+}
+
+audio {
+    display: none;
+}
+
+
+
+body, ul {
+    margin: 0;
+    padding: 0;
+}
+
+
+header {
+    z-index: 2;
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    background-color: #242222;
+    color: #fff;
+    padding: 10px 0;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 80px;
+}
+
+.logo img {
+    max-height: 3em;
+    margin-left: 10px;
+}
+
+
+nav ul {
+    list-style: none;
+}
+
+nav li {
+    display: inline;
+    margin-right: 20px;
+}
+
+nav a {
+    text-decoration: none;
+    color: #fff;
+    font-weight: bold;
+}
+
+
+    nav a:hover {
+        text-decoration: underline;
+    }
+
+.content {
+    padding: 100px 0;
+}
+
+
+
+.navbar-form {
+    display: inline-block;
+    float: right;
+    margin-right: 20px;
+}
+
+.form-control {
+    width: 160px;
+    height: 13px;
+    background-color: lightblue;
+    color: darkblue;
+    border: none;
+    padding: 7px;
+    margin-top: 10px;
+    border-radius: 15px;
+    transition: background-color 0.3s, border 0.3s;
+    border: 2px solid transparent;
+}
+
+    .form-control::placeholder {
+        color: #555;
+    }
+
+    .form-control:focus {
+        background-color: #fff;
+        outline: none;
+        border: 2px solid white;
+    }
+
+

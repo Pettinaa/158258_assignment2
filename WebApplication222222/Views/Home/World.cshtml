@@ -136,9 +136,9 @@
                 <button id="submit">submit</button>
             </div>
             <ul class="message-list" id="message-list">
-                <!-- 留言将在这里显示 -->
+               
             </ul>
-            <!-- 显示提交成功消息的部分 -->
+            
             <div id="successMessage" style="display: none;"></div>
         </div>
         <script src="~/wwwroot/js/board.js"></script>
@@ -181,15 +181,15 @@
         const sections = document.querySelectorAll('section');
         const footer = document.querySelector('footer');
 
-        // 计算 footer 顶部的偏移量
+       
         const footerOffset = footer.offsetTop;
 
-        // 添加滚动事件监听器
+        
         window.addEventListener('scroll', function () {
-            // 获取当前滚动位置
+           
             const scrollTop = window.scrollY;
 
-            // 根据滚动位置确定当前所在的部分
+           
             let currentSection = null;
             sections.forEach(section => {
                 if (section.offsetTop - navbar.offsetHeight <= scrollTop) {
@@ -197,9 +197,9 @@
                 }
             });
 
-            // 设置导航栏样式
+           
             if (currentSection) {
-                // 设置导航项为活动状态
+              
                 const currentNavItem = navbar.querySelector(`[href="#${currentSection.id}"]`);
                 const navItems = navbar.querySelectorAll('a');
                 navItems.forEach(item => {
@@ -208,7 +208,7 @@
                 currentNavItem.classList.add('active');
             }
 
-            // 如果滚动位置达到或超过 footer 顶部位置，将导航栏的位置设置为 absolute
+           
             if (scrollTop >= footerOffset - navbar.offsetHeight) {
                 navbar.style.position = 'absolute';
                 navbar.style.top = `${footerOffset - navbar.offsetHeight}px`;

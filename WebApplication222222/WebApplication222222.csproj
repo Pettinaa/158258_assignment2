@@ -191,8 +191,11 @@
     <Content Include="Scripts\bootstrap.js" />
     <Content Include="Scripts\bootstrap.min.js" />
     <Content Include="wwwroot\audioMusic\Liyue.ogg" />
+    <Content Include="wwwroot\css\Atlas.css" />
     <Content Include="wwwroot\css\Character.css" />
+    <Content Include="wwwroot\css\Element.css" />
     <Content Include="wwwroot\css\Index.css" />
+    <Content Include="wwwroot\css\Layout.css" />
     <Content Include="wwwroot\css\News.css" />
     <Content Include="wwwroot\css\World.css" />
     <Content Include="wwwroot\image\1024_1.jpg" />
