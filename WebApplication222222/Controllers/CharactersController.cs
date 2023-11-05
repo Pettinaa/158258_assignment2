@@ -72,11 +72,7 @@ namespace WebApplication222222.Controllers
             int currentPage = (page ?? 1);
             viewModel.Characters = characters.ToPagedList(currentPage, PageItems);
 
-
-
-
            return View(viewModel);
-
 
         }
 

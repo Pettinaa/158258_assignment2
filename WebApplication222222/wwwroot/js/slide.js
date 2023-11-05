@@ -11,7 +11,7 @@ function showSlides() {
         slideIndex = 1;
     }
     slides[slideIndex - 1].style.display = "block";
-    setTimeout(showSlides, 3000); // 切换图片的时间间隔（1秒）
+    setTimeout(showSlides, 3000);
 }
 
 showSlides();
